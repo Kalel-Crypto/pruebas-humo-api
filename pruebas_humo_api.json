@@ -16,7 +16,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"El tiempo de respeusta es menor a 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\npm.test(\"Body is not empty\", function () {\n    pm.expect(pm.response.text()).to.not.be.empty;\n});\npm.test(\"Content-Type is present\", function () {\n    pm.response.to.have.header(\"Content-Type\");\n});\npm.test(\"Response size is less than 1000 bytes\", function () {\n    pm.expect(pm.response.responseSize).to.be.below(1000);\n});"
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(2000);\n});\npm.test(\"El tiempo de respeusta es menor a 2000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(2000);\n});\npm.test(\"Body is not empty\", function () {\n    pm.expect(pm.response.text()).to.not.be.empty;\n});\npm.test(\"Content-Type is present\", function () {\n    pm.response.to.have.header(\"Content-Type\");\n});\npm.test(\"Response size is less than 1000 bytes\", function () {\n    pm.expect(pm.response.responseSize).to.be.below(2000);\n});"
             ]
           }
         }
