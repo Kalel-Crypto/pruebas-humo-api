@@ -10,11 +10,36 @@
   "item": [
     {
       "name": "New Request",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\n    pm.response.to.have.status(200);\n});\npm.test(\"El tiempo de respeusta es menor a 1000ms\", function () {\n    pm.expect(pm.response.responseTime).to.be.below(1000);\n});\npm.test(\"Body is not empty\", function () {\n    pm.expect(pm.response.text()).to.not.be.empty;\n});\npm.test(\"Content-Type is present\", function () {\n    pm.response.to.have.header(\"Content-Type\");\n});\npm.test(\"Response size is less than 1000 bytes\", function () {\n    pm.expect(pm.response.responseSize).to.be.below(1000);\n});"
+            ]
+          }
+        }
+      ],
       "request": {
         "method": "GET",
         "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": []
+        },
         "url": {
-          "raw": ""
+          "raw": "https://buggy.justtestit.org/make/ckl2phsabijs71623vk0",
+          "protocol": "https",
+          "host": [
+            "buggy",
+            "justtestit",
+            "org"
+          ],
+          "path": [
+            "make",
+            "ckl2phsabijs71623vk0"
+          ]
         }
       },
       "response": []
